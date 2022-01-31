@@ -16,7 +16,7 @@ import NoImage from '../assets/images/no_image.jpg';
 //components
 import HeroImage from "../components/heroImage";
 import Grid from "../components/grid";
-import {findAllByDisplayValue} from "@testing-library/react";
+import Thumb from "../components/thumb";
 
 const Home = () => {
 
@@ -35,7 +35,11 @@ const Home = () => {
             }
             <Grid header={"Popular Movies"}>
                 {state.results.map((movie) => (
-                    <div key={movie.id}>{movie.title}</div>
+                        <Thumb
+                            key={movie.id}
+                            image={movie.poster_path ? IMAGE_BASE_URL + POSTER_SIZE + movie.poster_path : NoImage}
+                            movieId = {movie.id}
+                        />
                     )
                 )}
             </Grid>
