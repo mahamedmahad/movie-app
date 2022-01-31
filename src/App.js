@@ -6,13 +6,15 @@ import Header from "./components/header";
 
 //styles
 import {GlobalStyle} from "./GlobalStyles";
+import Home from "./pages/home";
 
 const App = () => {
     return (
         <div>
+
             <GlobalStyle/>
-            {/***header**/}
             <Header/>
+            <Home/>
             {/***Hero**/}
             {/***Main Section**/}
             {/***Search Section**/}
