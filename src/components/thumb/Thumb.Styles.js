@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 
+/*
 export const ThumbNailTitle = styled.div`
   background-color: var(--darkGray);
   color: var(--white);
@@ -29,16 +30,19 @@ export const ThumbNailTitle = styled.div`
     font-size: 12px;
   }
 
-`;
+`; */
 
 export const Wrapper = styled.div`
-  position: relative;
-  overflow: hidden;
+  //position: relative;
+  //overflow: hidden;
 
-  &:hover ${ThumbNailTitle} {
+  /*
+  &:hover {ThumbNailTitle} {
     transform: translateY(0%);
 
   }
+  
+   */
 
 `;
 
