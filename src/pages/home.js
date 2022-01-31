@@ -18,35 +18,41 @@ import HeroImage from "../components/heroImage";
 import Grid from "../components/grid";
 import Thumb from "../components/thumb";
 import Spinner from "../components/spinner";
+import SearchBar from "../components/search";
 
 const Home = () => {
 
-    const {state, loading, error} = useHomeFetch()
+    const {state, loading, error, setSearchTerm, searchTerm} = useHomeFetch()
 
     console.log(state)
 
     return (
         <>
-            {state.results[0] &&
-                <HeroImage
-                    image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.results[0].backdrop_path}`}
-                    title={state.results[0].original_title}
-                    text={state.results[0].overview}
-                />
+            {!searchTerm && state.results[0] ? (
+                    <HeroImage
+                        image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.results[0].backdrop_path}`}
+                        title={state.results[0].original_title}
+                        text={state.results[0].overview}
+                    />)
+                : null
             }
-            <Grid header={"Popular Movies"}>
+
+            {/***search Bar ***/}
+            <SearchBar setSearchTerm={setSearchTerm}/>
+
+            <Grid header={searchTerm ? 'Search Results' : 'Popular Movies'}>
                 {state.results.map((movie) => (
                         <Thumb
                             key={movie.id}
                             image={movie.poster_path ? IMAGE_BASE_URL + POSTER_SIZE + movie.poster_path : NoImage}
-                            movieId = {movie.id}
+                            movieId={movie.id}
                             title={movie.title}
                             vote={movie.vote_average}
                         />
                     )
                 )}
             </Grid>
-            <Spinner />
+            <Spinner/>
         </>
     )
 }
