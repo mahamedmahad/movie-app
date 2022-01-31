@@ -39,6 +39,8 @@ const Home = () => {
                             key={movie.id}
                             image={movie.poster_path ? IMAGE_BASE_URL + POSTER_SIZE + movie.poster_path : NoImage}
                             movieId = {movie.id}
+                            title={movie.title}
+                            vote={movie.vote_average}
                         />
                     )
                 )}
