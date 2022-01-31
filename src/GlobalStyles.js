@@ -20,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 2rem;
       font-weight: 600;
       color: var(--white);
+      margin-bottom: 20px;
     }
     
     h3 {
