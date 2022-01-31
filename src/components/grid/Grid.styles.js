@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
 
   h1 {
     color: var(--medGrey);
+    margin-top: 10px;
 
 
     @media (max-width: 768px) {
