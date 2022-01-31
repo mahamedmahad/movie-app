@@ -15,6 +15,8 @@ import NoImage from '../assets/images/no_image.jpg';
 
 //components
 import HeroImage from "../components/heroImage";
+import Grid from "../components/grid";
+import {findAllByDisplayValue} from "@testing-library/react";
 
 const Home = () => {
 
@@ -31,6 +33,12 @@ const Home = () => {
                     text={state.results[0].overview}
                 />
             }
+            <Grid header={"Popular Movies"}>
+                {state.results.map((movie) => (
+                    <div key={movie.id}>{movie.title}</div>
+                    )
+                )}
+            </Grid>
         </>
     )
 }
