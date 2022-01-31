@@ -18,9 +18,13 @@ export const useHomeFetch = () => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false)
 
+    //search states
     const [searchTerm, setSearchTerm] = useState('')
 
     //console.log(searchTerm);
+
+    //button states
+    const [isLoadingMore, setLoadingMore] = useState(false)
 
     const fetchMovies = async (page, searchTerm = "") => {
         try {
@@ -50,6 +54,16 @@ export const useHomeFetch = () => {
     }, [searchTerm])
 
 
-    return {state, loading, error, setSearchTerm, searchTerm}
+    //load more- button r-render new movies when clicked load more
+    useEffect(() => {
+        if (!isLoadingMore) return;
+
+        fetchMovies(state.page + 1, searchTerm)
+        setLoadingMore(false);
+
+    }, [isLoadingMore, searchTerm, state.page])
+
+
+    return {state, loading, error, setSearchTerm, searchTerm, setLoadingMore}
 
 }
