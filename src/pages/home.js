@@ -25,7 +25,7 @@ const Home = () => {
 
     const {state, loading, error, setSearchTerm, searchTerm, setLoadingMore} = useHomeFetch()
 
-    console.log(state)
+    //console.log(state)
 
     if (error) return <div>Something went wrong.....</div>
 
