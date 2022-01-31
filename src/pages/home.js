@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
 
 //config
@@ -17,6 +17,7 @@ import NoImage from '../assets/images/no_image.jpg';
 import HeroImage from "../components/heroImage";
 import Grid from "../components/grid";
 import Thumb from "../components/thumb";
+import Spinner from "../components/spinner";
 
 const Home = () => {
 
@@ -45,6 +46,7 @@ const Home = () => {
                     )
                 )}
             </Grid>
+            <Spinner />
         </>
     )
 }
