@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 
-/*
 export const ThumbNailTitle = styled.div`
   background-color: var(--darkGray);
   color: var(--white);
@@ -17,32 +16,33 @@ export const ThumbNailTitle = styled.div`
   transition: transform 0.5s ease-in-out;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
 
   h2 {
     font-size: var(--fontSmall)
   }
+
   span {
     font-size: 12px;
   }
 
-`; */
+`;
 
 export const Wrapper = styled.div`
-  //position: relative;
-  //overflow: hidden;
+  position: relative;
+  overflow: hidden;
 
-  /*
-  &:hover {ThumbNailTitle} {
+
+  &:hover ${ThumbNailTitle} {
     transform: translateY(0%);
 
   }
-  
-   */
+
+
 
 `;
 

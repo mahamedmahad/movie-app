@@ -16,6 +16,15 @@ const Thumb = ({image, movieId, clickable, title, vote}) => {
             ) : (
                 <Image src={image} alt="movie-thumb"/>
             )}
+
+            {
+                clickable ? (
+                    <ThumbNailTitle>
+                        <h2>{title}</h2>
+                        <span>⭐{vote}</span>
+                    </ThumbNailTitle>
+                ) : null
+            }
             {/****
              <ThumbNailTitle>
              <h2>{title}</h2>
