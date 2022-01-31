@@ -1,12 +1,15 @@
 import React from 'react';
 
+import {Link} from 'react-router-dom';
+
 //logos
 import RMDBLogo from '../../assets/images/react-movie-logo.svg';
 import TMBDLogo from '../../assets/images/tmdb_logo.svg';
 
 
 //styles
-import {Wrapper,
+import {
+    Wrapper,
     Content,
     LogoImg,
     TMDBLogoImg
@@ -14,13 +17,15 @@ import {Wrapper,
 } from "./Header.styles";
 
 
-
 const Header = (props) => {
     return (
         <Wrapper>
             <Content>
-                <LogoImg src={RMDBLogo} alt={"rmdb-logo"}/>
-                <TMDBLogoImg src={TMBDLogo} alt={"tmdb-logo"}/>
+                <Link to={"/"}>
+
+                    <LogoImg src={RMDBLogo} alt={"rmdb-logo"}/>
+                </Link>
+                    <TMDBLogoImg src={TMBDLogo} alt={"tmdb-logo"}/>
             </Content>
         </Wrapper>
     )

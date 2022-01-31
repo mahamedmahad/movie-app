@@ -54,6 +54,7 @@ const Home = () => {
                             movieId={movie.id}
                             title={movie.title}
                             vote={movie.vote_average}
+                            clickable={true}
                         />
                     )
                 )}
