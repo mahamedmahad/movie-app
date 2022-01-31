@@ -30,7 +30,7 @@ export const Content = styled.div`
   }
   
   input {
-    font-size: 28px;
+    font-size: var(--fontBig);
     position: absolute;
     left: 0;
     margin: 8px 0;
@@ -41,7 +41,7 @@ export const Content = styled.div`
     color: var(--white);
     
     @media (max-width: 768px) {
-      font-size: 20px;
+      font-size: var(--fontMed);
     }
   }
 

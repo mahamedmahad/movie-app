@@ -19,12 +19,18 @@ import Grid from "../components/grid";
 import Thumb from "../components/thumb";
 import Spinner from "../components/spinner";
 import SearchBar from "../components/search";
+import Button from "../components/button";
 
 const Home = () => {
 
-    const {state, loading, error, setSearchTerm, searchTerm} = useHomeFetch()
+    const {state, loading, error, setSearchTerm, searchTerm, setLoadingMore} = useHomeFetch()
 
     console.log(state)
+
+    if (error) return <div>Something went wrong.....</div>
+
+
+
 
     return (
         <>
@@ -41,9 +47,9 @@ const Home = () => {
             <SearchBar setSearchTerm={setSearchTerm}/>
 
             <Grid header={searchTerm ? 'Search Results' : 'Popular Movies'}>
-                {state.results.map((movie) => (
+                {state.results.map((movie, index) => (
                         <Thumb
-                            key={movie.id}
+                            key={index}
                             image={movie.poster_path ? IMAGE_BASE_URL + POSTER_SIZE + movie.poster_path : NoImage}
                             movieId={movie.id}
                             title={movie.title}
@@ -52,7 +58,10 @@ const Home = () => {
                     )
                 )}
             </Grid>
-            <Spinner/>
+            {loading && <Spinner/>}
+            {state.page < state.total_pages && !loading && (
+                <Button text={"Load More"} callback={() => setLoadingMore(true)}/>
+            )}
         </>
     )
 }
