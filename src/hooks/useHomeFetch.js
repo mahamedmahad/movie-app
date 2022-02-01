@@ -57,13 +57,14 @@ export const useHomeFetch = () => {
             const sessionState = isPersistedState('homeState')
 
             if (sessionState) {
-                console.log('Grapping from sessionStorage')
+                //console.log('Grapping from sessionStorage')
                 setState(sessionState)
                 return;
             }
         }
 
-        console.log('Grapping from API')
+        //first render- grapping from the API
+        //console.log('Grapping from API')
 
         setState(initialState);
         fetchMovies(1, searchTerm)
