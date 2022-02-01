@@ -25,8 +25,6 @@ V
 &src/components/search/Search.styles.js,7\b\7b73cd2c5041e236f6324e0cf3892dc328fe22d2
 V
 &src/components/button/Button.styles.js,7\e\7e6a823c9df9ff95728ab159d0ec814e74a262d4
-N
-src/components/button/index.js,7\e\7e242e76eb79ba1eea4d332d91169131a3574452
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302

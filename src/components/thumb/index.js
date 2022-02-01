@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import PropTypes from 'prop-types';
+
 import {Image, ThumbNailTitle, Wrapper} from './Thumb.Styles';
 
 
@@ -35,4 +37,14 @@ const Thumb = ({image, movieId, clickable, title, vote}) => {
         </Wrapper>
     )
 }
+
+Thumb.propTypes = {
+    image: PropTypes.string,
+    movieId: PropTypes.number,
+    clickable: PropTypes.bool,
+    title: PropTypes.string,
+    vote: PropTypes.number
+}
+
+
 export default Thumb;

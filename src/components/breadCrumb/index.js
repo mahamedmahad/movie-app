@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {Wrapper, Content} from './BreadCrumb.styles';
 
@@ -18,4 +19,9 @@ const Breadcrumbs = ({movieTitle}) => {
         </Wrapper>
     )
 }
+
+Breadcrumbs.propTypes = {
+    movieTitle: PropTypes.string
+}
+
 export default Breadcrumbs;
