@@ -26,7 +26,7 @@ const Movie = () => {
 
     const {state: movie, loading, error} = useMovieFetch(movieId)
 
-    console.log(movie)
+    //console.log(movie)
 
     if (loading) return <Spinner/>
 
