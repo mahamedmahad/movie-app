@@ -2,6 +2,8 @@ import {useEffect, useState} from "react";
 
 import API from '../API';
 
+import {isPersistedState} from '../helpers';
+
 
 export const useMovieFetch = (movieId) => {
     const [state, setState] = useState({})
@@ -38,9 +40,33 @@ export const useMovieFetch = (movieId) => {
             }
         }
 
+        //check if we have something from sessionState
+        const sessionState = isPersistedState(movieId);
+
+        if (sessionState) {
+            //console.log('Grapping from sessionstorage Movie!');
+
+            setState(sessionState);
+            setLoading(false);
+
+            return;
+        }
+
+
+        //console.log('Grapping from API!');
+
         fetchMovie()
 
-    }, [movieId])
+    }, [movieId]);
+
+
+    //writing to the session Storage
+
+    useEffect(() => {
+
+        sessionStorage.setItem(movieId, JSON.stringify(state));
+
+    }, [movieId, state])
 
     return {state, loading, error};
 }
