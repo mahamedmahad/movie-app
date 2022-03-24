@@ -3,12 +3,6 @@
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 A
 public/index.html,f\4\f43ecdf8d666ee908aacce037b4cd72159e4741b
-=
-src/index.css,c\5\c5d38a62d1faae90a2acaa34b79a7ef365c917e4
-<
-src/index.js,f\9\f900edc44cb929c2267a16100a32851f6d5b477d
-V
-&src/components/header/Header.styles.js,e\f\ef4dc08c83288784020e7239035249db34a81a49
 \
 ,src/components/heroImage/HeroImage.Styles.js,c\9\c9a05e52767fe1fdf6ea0e71d2b59d42e0111a99
 Q
@@ -23,31 +17,19 @@ V
 &src/components/search/Search.styles.js,7\b\7b73cd2c5041e236f6324e0cf3892dc328fe22d2
 V
 &src/components/button/Button.styles.js,7\e\7e6a823c9df9ff95728ab159d0ec814e74a262d4
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 <
 package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
 E
 src/pages/notFound.js,9\5\95201702bfb123f64fc056ae5d9f68b2432269eb
-N
-src/components/header/index.js,9\6\96c56403a1353cabd4b0c379a6c3340ab3e3d727
 :
 
 src/App.js,1\e\1e43fa63aecd2127be034b3fb9d4caa172275714
-:
-
-src/API.js,c\8\c86f30c148933cc9c7ce49964205cb3c49e377ed
 ^
 .src/components/breadCrumb/BreadCrumb.styles.js,e\3\e38f4b650b65a554e8a89c32d111d6e9102bdda8
 \
 ,src/components/movieInfo/MovieInfo.styles.js,1\e\1e07add05e4bbaaf8a05b9705350ae2a910c036f
 T
 $src/components/thumb/Thumb.Styles.js,0\9\090fc9939f0d6e445c980db73ad6e3e6681c4966
-=
-src/config.js,8\7\87f3e0e4cc62eefaef83559ad73420b22d52e801
-C
-src/GlobalStyles.js,b\2\b2ad0b9930213e4a9672d998161c5398cae05ba2
 b
 2src/components/movieInfoBar/MovieInfoBar.styles.js,d\7\d77b26e422bd15ea6b4998aaa89176d8da382a42
 T
@@ -68,5 +50,3 @@ N
 src/components/button/index.js,7\e\7e242e76eb79ba1eea4d332d91169131a3574452
 M
 src/components/thumb/index.js,0\6\06a2b37d9e6bc4c45a9d1f78acbcd65dc3d52252
-A
-src/pages/home.js,1\7\174c487ab4b2f2062cc6e340fad402ccb3bc1434

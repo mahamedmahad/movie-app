@@ -13,6 +13,9 @@ export const useMovieFetch = (movieId) => {
 
     useEffect(() => {
 
+        /**
+         * It fetches the movie and credits from the API and sets the state with the data.
+         */
         const fetchMovie = async () => {
             try {
                 setLoading(true)
@@ -64,6 +67,7 @@ export const useMovieFetch = (movieId) => {
 
     useEffect(() => {
 
+        /* This is writing the state to the sessionStorage. */
         sessionStorage.setItem(movieId, JSON.stringify(state));
 
     }, [movieId, state])

@@ -8,6 +8,7 @@ import {
     SESSION_ID_URL
 } from './config';
 
+/* It's setting the default configuration for the fetch method. */
 const defaultConfig = {
     method: 'POST',
     headers: {
@@ -16,6 +17,7 @@ const defaultConfig = {
 };
 
 const apiSettings = {
+    /* It's fetching the movies from the API. */
     fetchMovies: async (searchTerm, page) => {
         const endpoint = searchTerm
             ? `${SEARCH_BASE_URL}${searchTerm}&page=${page}`

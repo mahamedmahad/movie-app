@@ -27,6 +27,11 @@ export const useHomeFetch = () => {
     //button states
     const [isLoadingMore, setLoadingMore] = useState(false)
 
+    /**
+     * This function fetches the movies from the API and sets the state with the results
+     * @param page - The page number of the results to fetch.
+     * @param [searchTerm] - The search term that the user has entered.
+     */
     const fetchMovies = async (page, searchTerm = "") => {
         try {
             setError(false)

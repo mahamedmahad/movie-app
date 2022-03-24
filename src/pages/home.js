@@ -47,6 +47,7 @@ const Home = () => {
             <SearchBar setSearchTerm={setSearchTerm}/>
 
             <Grid header={searchTerm ? 'Search Results' : 'Popular Movies'}>
+                {/* Mapping the results array and returning a thumb component for each movie in the array. */}
                 {state.results.map((movie, index) => (
                         <Thumb
                             key={index}
